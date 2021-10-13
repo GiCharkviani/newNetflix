@@ -1,0 +1,68 @@
+<img
+  [src]="
+    movie.img !== 'https://image.tmdb.org/t/p/originalnull'
+      ? movie.img
+      : 'https://upload.wikimedia.org/wikipedia/commons/0/03/Thondon_entertainment.jpg'
+  "
+  (click)="showMore()"
+/>
+
+<ng-template #moreInfo>
+  <section>
+    <div class="details">
+      <header>
+        <div class="imgOrVideo">
+          <button class="close" (click)="close()"><i class="fas fa-times"></i></button>
+          <img [src]="movie.poster" />
+          <!-- <video src=""></video> -->
+
+          <div class="buttons">
+            <button class="play"><i class="fas fa-play"></i> Play</button>
+            <button class="plus"><i class="fas fa-plus"></i></button>
+            <button class="like"><i class="far fa-thumbs-up"></i></button>
+            <button class="dislike"><i class="far fa-thumbs-down"></i></button>
+            <button class="sound"><i class="fas fa-volume-up"></i></button>
+            <!-- <button class="soundOff"><i class="fas fa-volume-mute"></i></button> -->
+          </div>
+        </div>
+
+      </header>
+
+      <main>
+        <div class="genOver">
+          <div class="general">
+            <span class="date">{{ movie.date }}</span>
+            <span class="rate">{{ movie.rate }}</span>
+          </div>
+          <div class="overview">
+            <p>
+              {{
+                movie.overview.length >= 150
+                  ? movie.overview.substring(0, 150) + "..."
+                  : movie.overview
+              }}
+            </p>
+          </div>
+        </div>
+
+        <div class="castGenres">
+          <div class="cast">
+            <span>Cast: </span>
+            <p *ngFor="let cast of movie.cast">{{ cast + ' ' }}</p>
+          </div>
+          <div class="genres">
+            <span>Genres: </span>
+            <p *ngFor="let genre of movie.genres">{{ genre.genre + ' ' }}</p>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <h2>More like this</h2>
+        <div class="imgs">
+          <img  *ngFor="let img of movie.similarMovies" [src]="img" />
+        </div>
+      </footer>
+    </div>
+  </section>
+</ng-template>

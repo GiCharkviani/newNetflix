@@ -1,0 +1,14 @@
+
+<header class="video">
+  <video loop src="https://movietrailers.apple.com/movies/independent/no-future/no-future-trailer-1_h1080p.mov" width="100%" #video height="600px" autoplay [muted]="muteState"></video>
+  <div class="buttons">
+
+    <button class="play" *ngIf="!playState" (click)="play(video)"><i class="fas fa-play"></i> Play</button>
+    <button class="play" *ngIf="playState" (click)="play(video)"><i class="fas fa-pause"></i> Pause</button>
+
+    <button class="moreInfo"><i class="fas fa-info-circle"></i> More Info</button>
+
+    <button class="sound" (click)="mute(video)" *ngIf="!muteState" ><i class="fas fa-volume-up"></i></button>
+    <button class="sound" (click)="mute(video)" *ngIf="muteState" ><i class="fas fa-volume-mute"></i></button>
+  </div>
+</header>

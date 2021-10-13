@@ -1,0 +1,64 @@
+header video {
+  object-fit: cover;
+}
+header .buttons {
+  display: flex;
+  position: absolute;
+  top: 70%;
+  margin-left: 35px;
+  width: 95%;
+}
+button {
+  margin-right: 5px;
+}
+/* play */
+header .buttons .play {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 5px;
+  border: none;
+  font-weight: bold;
+  padding: 6px;
+  cursor: pointer;
+}
+header .buttons .play:hover {
+  background-color: rgb(24,24,24);
+  color: white;
+}
+header .buttons .play i {
+  margin-right: 5px;
+}
+
+header .buttons .moreInfo {
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: 5px;
+  border: none;
+  font-weight: bold;
+  padding: 6px;
+  cursor: pointer;
+  background-color: rgb(24,24,24);
+  color: white;
+}
+header .buttons .moreInfo:hover {
+  color: rgb(24,24,24);
+  background-color: white;
+}
+
+header .buttons .sound {
+  margin-left: 60%;
+  border-radius: 50%;
+  padding: 5px;
+  border: 1px solid rgb(156, 155, 155);
+  background-color: rgba(24,24,24,.3);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  color: rgb(156, 155, 155);
+}
+
+header .buttons .sound:hover {
+  background-color: rgba(245, 245, 245, 0.445);
+}

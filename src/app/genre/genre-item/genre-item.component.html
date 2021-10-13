@@ -1,0 +1,27 @@
+<!-- <div class="main-holder">
+ <div class="title">
+    <p>{{ genre.name }}</p>
+  </div>
+
+  <div class="movie-holder" movieHolderDirective>
+    <button scrollTowards="west"><i class="fas fa-chevron-left"></i></button>
+    <div class="movies" movieHolderDirective>
+      <ng-template movie></ng-template>
+    </div>
+    <button scrollTowards="east"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</div> -->
+
+<div class="genre-holder">
+  <div class="title">
+    <p>{{ genre.name }}</p>
+  </div>
+
+  <div class="movie-holder" scrollDirective>
+    <div class="buttons">
+      <button scrollTowards="west"><i class="fas fa-chevron-left"></i></button>
+      <button scrollTowards="east"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <ng-template movie></ng-template>
+  </div>
+</div>
