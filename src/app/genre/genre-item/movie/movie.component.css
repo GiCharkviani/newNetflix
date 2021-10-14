@@ -106,7 +106,7 @@ header .buttons .plus, header .buttons .like, header .buttons .dislike {
 }
 
 header .buttons .sound {
-  margin-left: 20%;
+  margin-left: 30%;
   border-radius: 50%;
   padding: 5px;
   border: 1px solid rgb(156, 155, 155);
@@ -206,11 +206,12 @@ footer h2 {
 
 footer .imgs {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 footer .imgs img {
-  width: 30%;
+  width: 25%;
   height: 100px;
+  margin-right: 13px;
   cursor: pointer;
 }

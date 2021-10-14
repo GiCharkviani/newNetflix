@@ -60,7 +60,7 @@ export class FetchService {
           let film = [];
           for (let i in thereFilms) {
             film.push(
-              `https://image.tmdb.org/t/p/original${thereFilms[i].poster_path}`
+              `https://image.tmdb.org/t/p/original${thereFilms[i].backdrop_path}`
             );
           }
           return film;
